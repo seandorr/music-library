@@ -1,0 +1,86 @@
+:export {
+  mainColor: #e5d1c1;
+  secondaryColor: #333;
+  yellowColor: #cccc72;
+  redColor: #e85757;
+  blueColor: #71ccbe;
+  purpleColor: #c672cc;
+  greenColor: #80cc72;
+}
+
+.music-library__main-container {
+  width: 100%;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 80px 80px 80px;
+      grid-template-columns: 80px 80px 80px;
+}
+
+.music-library__main-container .music-library__item {
+  height: 100vh;
+  width: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: -5px 0 20px rgba(0, 0, 0, 0.4);
+          box-shadow: -5px 0 20px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+.music-library__main-container .music-library__item .music-library__item-title-wrapper h1 {
+  font-size: 36px;
+  font-family: sans-serif;
+}
+
+.music-library__main-container .music-library__item .music-library__item-title-wrapper h1.music-library__item-title {
+  color: #333;
+  width: 100vh;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.music-library__main-container .music-library__selected-item-content {
+  width: calc(100% - 240px);
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.music-library__main-container .music-library__selected-item-content.item-1 {
+  background-color: #71ccbe;
+}
+
+.music-library__main-container .music-library__selected-item-content.item-2 {
+  background-color: #e85757;
+}
+
+.music-library__main-container .music-library__selected-item-content.item-3 {
+  background-color: #e5d1c1;
+}
+/*# sourceMappingURL=home.css.map */
