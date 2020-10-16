@@ -20,6 +20,13 @@ const homePageItems = {
     color: "mainColor",
     playlistURL: "7u39Z1ivajbKGkszD0V368",
   },
+  "item-4": {
+    id: 4,
+    value: "item-4",
+    title: "best playlist right here",
+    color: "purpleColor",
+    playlistURL: "7u39Z1ivajbKGkszD0V368",
+  },
 };
 
 export default homePageItems;
