@@ -3,15 +3,17 @@ import { useState } from "react";
 import homePageItems from "./consts/homePageItems";
 import HomePageItem from "./components/HomePageItem";
 import "./home.scss";
-import HomePageActiveItemContent from "./components/HomePageActiveItemContent";
 
 const Home = () => {
-  const [activeItem, setActiveItem] = useState("item-3");
-
+  const arrayHomePageItems = Object.keys(homePageItems);
+  const numberOfItems = arrayHomePageItems.length;
+  const lastItem = arrayHomePageItems[arrayHomePageItems.length - 1];
+  const [activeItem, setActiveItem] = useState(lastItem);
+  
   return (
     <div className="music-library__main-container">
       {Object.values(homePageItems).map((item) => {
-        const { id, title, value, color, playlistURL } = item;
+        const { id, title, value, color } = item;
 
         return (
           <HomePageItem
@@ -21,14 +23,13 @@ const Home = () => {
             color={color}
             key={id}
             homePageItems={homePageItems}
+            numberOfItems={numberOfItems}
+            lastItem={lastItem}
             activeItem={activeItem}
             setActiveItem={setActiveItem}
           />
         );
       })}
-      <div className={`music-library__selected-item-content ${activeItem}`}>
-        <HomePageActiveItemContent activeItem={activeItem} />
-      </div>
     </div>
   );
 };
